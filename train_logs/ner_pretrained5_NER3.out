@@ -1,0 +1,128 @@
+Found cached dataset maccrobat_biomedical_ner (/home/s1/serimkim/.cache/huggingface/datasets/singh-aditya___maccrobat_biomedical_ner/default/0.0.0/974acf92c41cf1d5ddfe4bc372d577351657cfae1f57fe3899bbfc4c05ed09fc)
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 361.61it/s]
+Some weights of the model checkpoint at /home/s1/serimkim/hf/distil-kobert-finetuned_len10_epoch5/checkpoint-13000 were not used when initializing DistilBertForTokenClassification: ['vocab_transform.bias', 'vocab_transform.weight', 'vocab_layer_norm.weight', 'vocab_layer_norm.bias', 'vocab_projector.bias', 'vocab_projector.weight']
+- This IS expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of DistilBertForTokenClassification were not initialized from the model checkpoint at /home/s1/serimkim/hf/distil-kobert-finetuned_len10_epoch5/checkpoint-13000 and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading cached processed dataset at /home/s1/serimkim/.cache/huggingface/datasets/singh-aditya___maccrobat_biomedical_ner/default/0.0.0/974acf92c41cf1d5ddfe4bc372d577351657cfae1f57fe3899bbfc4c05ed09fc/cache-a8a8aa885433f07f.arrow
+Map:   0%|          | 0/160 [00:00<?, ? examples/s]Map: 100%|██████████| 160/160 [00:00<00:00, 393.31 examples/s]                                                              Map:   0%|          | 0/40 [00:00<?, ? examples/s]                                                  Using amp fp16 backend
+***** Running training *****
+  Num examples = 1213
+  Num Epochs = 3
+  Instantaneous batch size per device = 32
+  Total train batch size (w. parallel, distributed & accumulation) = 128
+  Gradient Accumulation steps = 1
+  Total optimization steps = 30
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+wandb: Currently logged in as: ksr5970. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.16.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.0
+wandb: Run data is saved locally in /home/s1/serimkim/hf/wandb/run-20240122_045807-lpa4orpr
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run finetuned_distilkobert_ner_10
+wandb: ⭐️ View project at https://wandb.ai/ksr5970/huggingface
+wandb: 🚀 View run at https://wandb.ai/ksr5970/huggingface/runs/lpa4orpr
+cuda
+  0%|          | 0/30 [00:00<?, ?it/s]/home/s1/serimkim/anaconda3/envs/hf/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  3%|▎         | 1/30 [00:06<03:08,  6.49s/it]  7%|▋         | 2/30 [00:06<01:18,  2.81s/it] 10%|█         | 3/30 [00:06<00:43,  1.62s/it] 13%|█▎        | 4/30 [00:07<00:27,  1.07s/it] 17%|█▋        | 5/30 [00:07<00:19,  1.31it/s] 20%|██        | 6/30 [00:07<00:13,  1.73it/s] 23%|██▎       | 7/30 [00:07<00:10,  2.18it/s] 27%|██▋       | 8/30 [00:08<00:08,  2.62it/s] 30%|███       | 9/30 [00:08<00:06,  3.02it/s] 33%|███▎      | 10/30 [00:08<00:05,  3.49it/s]***** Running Evaluation *****
+  Num examples = 323
+  Batch size = 128
+
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 67%|██████▋   | 2/3 [00:00<00:00, 14.54it/s][A/home/s1/serimkim/anaconda3/envs/hf/lib/python3.8/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+                                               
+                                             [A 33%|███▎      | 10/30 [00:09<00:05,  3.49it/s]
+100%|██████████| 3/3 [00:00<00:00, 14.54it/s][A
+                                             [ASaving model checkpoint to finetuned_distilkobert_ner_10/checkpoint-10
+Configuration saved in finetuned_distilkobert_ner_10/checkpoint-10/config.json
+Model weights saved in finetuned_distilkobert_ner_10/checkpoint-10/pytorch_model.bin
+tokenizer config file saved in finetuned_distilkobert_ner_10/checkpoint-10/tokenizer_config.json
+Special tokens file saved in finetuned_distilkobert_ner_10/checkpoint-10/special_tokens_map.json
+/home/s1/serimkim/anaconda3/envs/hf/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 37%|███▋      | 11/30 [00:10<00:13,  1.41it/s] 40%|████      | 12/30 [00:10<00:10,  1.79it/s] 43%|████▎     | 13/30 [00:10<00:07,  2.20it/s] 47%|████▋     | 14/30 [00:10<00:06,  2.61it/s] 50%|█████     | 15/30 [00:10<00:05,  2.99it/s] 53%|█████▎    | 16/30 [00:11<00:04,  3.35it/s] 57%|█████▋    | 17/30 [00:11<00:03,  3.64it/s] 60%|██████    | 18/30 [00:11<00:03,  3.88it/s] 63%|██████▎   | 19/30 [00:11<00:02,  4.07it/s] 67%|██████▋   | 20/30 [00:12<00:02,  4.39it/s]***** Running Evaluation *****
+  Num examples = 323
+  Batch size = 128
+{'eval_loss': 3.9027907848358154, 'eval_precision': 0.04, 'eval_recall': 0.006749156355455568, 'eval_f1': 0.011549566891241578, 'eval_accuracy': 0.4013605442176871, 'eval_runtime': 0.6105, 'eval_samples_per_second': 529.098, 'eval_steps_per_second': 4.914, 'epoch': 1.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 67%|██████▋   | 2/3 [00:00<00:00, 14.86it/s][A/home/s1/serimkim/anaconda3/envs/hf/lib/python3.8/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+                                               
+                                             [A 67%|██████▋   | 20/30 [00:12<00:02,  4.39it/s]
+100%|██████████| 3/3 [00:00<00:00, 14.86it/s][A
+                                             [ASaving model checkpoint to finetuned_distilkobert_ner_10/checkpoint-20
+Configuration saved in finetuned_distilkobert_ner_10/checkpoint-20/config.json
+Model weights saved in finetuned_distilkobert_ner_10/checkpoint-20/pytorch_model.bin
+tokenizer config file saved in finetuned_distilkobert_ner_10/checkpoint-20/tokenizer_config.json
+Special tokens file saved in finetuned_distilkobert_ner_10/checkpoint-20/special_tokens_map.json
+/home/s1/serimkim/anaconda3/envs/hf/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 70%|███████   | 21/30 [00:13<00:05,  1.51it/s] 73%|███████▎  | 22/30 [00:13<00:04,  1.89it/s] 77%|███████▋  | 23/30 [00:14<00:03,  2.28it/s] 80%|████████  | 24/30 [00:14<00:02,  2.68it/s] 83%|████████▎ | 25/30 [00:14<00:01,  3.05it/s] 87%|████████▋ | 26/30 [00:14<00:01,  3.39it/s] 90%|█████████ | 27/30 [00:15<00:00,  3.68it/s] 93%|█████████▎| 28/30 [00:15<00:00,  3.92it/s] 97%|█████████▋| 29/30 [00:15<00:00,  4.12it/s]100%|██████████| 30/30 [00:15<00:00,  4.40it/s]***** Running Evaluation *****
+  Num examples = 323
+  Batch size = 128
+{'eval_loss': 3.6412878036499023, 'eval_precision': 0.07534246575342465, 'eval_recall': 0.0020622422197225346, 'eval_f1': 0.0040145985401459855, 'eval_accuracy': 0.43673469387755104, 'eval_runtime': 0.5804, 'eval_samples_per_second': 556.513, 'eval_steps_per_second': 5.169, 'epoch': 2.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 67%|██████▋   | 2/3 [00:00<00:00, 16.02it/s][A/home/s1/serimkim/anaconda3/envs/hf/lib/python3.8/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+                                               
+                                             [A100%|██████████| 30/30 [00:16<00:00,  4.40it/s]
+100%|██████████| 3/3 [00:00<00:00, 16.02it/s][A
+                                             [ASaving model checkpoint to finetuned_distilkobert_ner_10/checkpoint-30
+Configuration saved in finetuned_distilkobert_ner_10/checkpoint-30/config.json
+Model weights saved in finetuned_distilkobert_ner_10/checkpoint-30/pytorch_model.bin
+tokenizer config file saved in finetuned_distilkobert_ner_10/checkpoint-30/tokenizer_config.json
+Special tokens file saved in finetuned_distilkobert_ner_10/checkpoint-30/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from finetuned_distilkobert_ner_10/checkpoint-30 (score: 3.5411479473114014).
+                                               100%|██████████| 30/30 [00:17<00:00,  4.40it/s]100%|██████████| 30/30 [00:17<00:00,  1.72it/s]
+{'eval_loss': 3.5411479473114014, 'eval_precision': 0.0967741935483871, 'eval_recall': 0.001687289088863892, 'eval_f1': 0.0033167495854063015, 'eval_accuracy': 0.4388278388278388, 'eval_runtime': 0.5741, 'eval_samples_per_second': 562.636, 'eval_steps_per_second': 5.226, 'epoch': 3.0}
+{'train_runtime': 24.2469, 'train_samples_per_second': 150.081, 'train_steps_per_second': 1.237, 'train_loss': 3.86014404296875, 'epoch': 3.0}
+[{'eval_loss': 3.9027907848358154, 'eval_precision': 0.04, 'eval_recall': 0.006749156355455568, 'eval_f1': 0.011549566891241578, 'eval_accuracy': 0.4013605442176871, 'eval_runtime': 0.6105, 'eval_samples_per_second': 529.098, 'eval_steps_per_second': 4.914, 'epoch': 1.0, 'step': 10}, {'eval_loss': 3.6412878036499023, 'eval_precision': 0.07534246575342465, 'eval_recall': 0.0020622422197225346, 'eval_f1': 0.0040145985401459855, 'eval_accuracy': 0.43673469387755104, 'eval_runtime': 0.5804, 'eval_samples_per_second': 556.513, 'eval_steps_per_second': 5.169, 'epoch': 2.0, 'step': 20}, {'eval_loss': 3.5411479473114014, 'eval_precision': 0.0967741935483871, 'eval_recall': 0.001687289088863892, 'eval_f1': 0.0033167495854063015, 'eval_accuracy': 0.4388278388278388, 'eval_runtime': 0.5741, 'eval_samples_per_second': 562.636, 'eval_steps_per_second': 5.226, 'epoch': 3.0, 'step': 30}, {'train_runtime': 24.2469, 'train_samples_per_second': 150.081, 'train_steps_per_second': 1.237, 'total_flos': 155766793895424.0, 'train_loss': 3.86014404296875, 'epoch': 3.0, 'step': 30}]
+wandb: 
+wandb: Run history:
+wandb:                  eval/accuracy ▁██
+wandb:                        eval/f1 █▂▁
+wandb:                      eval/loss █▃▁
+wandb:                 eval/precision ▁▅█
+wandb:                    eval/recall █▂▁
+wandb:                   eval/runtime █▂▁
+wandb:        eval/samples_per_second ▁▇█
+wandb:          eval/steps_per_second ▁▇█
+wandb:                    train/epoch ▁▅██
+wandb:              train/global_step ▁▅██
+wandb:               train/total_flos ▁
+wandb:               train/train_loss ▁
+wandb:            train/train_runtime ▁
+wandb: train/train_samples_per_second ▁
+wandb:   train/train_steps_per_second ▁
+wandb: 
+wandb: Run summary:
+wandb:                  eval/accuracy 0.43883
+wandb:                        eval/f1 0.00332
+wandb:                      eval/loss 3.54115
+wandb:                 eval/precision 0.09677
+wandb:                    eval/recall 0.00169
+wandb:                   eval/runtime 0.5741
+wandb:        eval/samples_per_second 562.636
+wandb:          eval/steps_per_second 5.226
+wandb:                    train/epoch 3.0
+wandb:              train/global_step 30
+wandb:               train/total_flos 155766793895424.0
+wandb:               train/train_loss 3.86014
+wandb:            train/train_runtime 24.2469
+wandb: train/train_samples_per_second 150.081
+wandb:   train/train_steps_per_second 1.237
+wandb: 
+wandb: 🚀 View run finetuned_distilkobert_ner_10 at: https://wandb.ai/ksr5970/huggingface/runs/lpa4orpr
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240122_045807-lpa4orpr/logs
